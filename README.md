@@ -10,7 +10,7 @@
   <br>
 <!-- Labels: -->
   <!-- First row: -->
-  <a href="https://github.com/TheAlgorithms/Fortran/blob/master/CONTRIBUTING.md">
+  <a href="https://github.com/TheAlgorithms/Fortran/blob/main/CONTRIBUTING.md">
     <img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square" height="20" alt="Contributions Welcome">
   </a>
   <a href="https://the-algorithms.com/discord">
