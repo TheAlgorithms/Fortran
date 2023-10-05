@@ -1,4 +1,6 @@
 # The Algorithms - Directory of Fortran
+## Maths
+* [recursive_factorial](/maths/recursive_factorial.f90)
 ## Simple Examples
 * [hello_world](/simple_eg/hello_world.f90)
 * [calc_circle](/simple_eg/hello_world.f90)
