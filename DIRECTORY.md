@@ -1,6 +1,8 @@
 # The Algorithms - Directory of Fortran
 ## Maths
+* [euclid_gcd](/maths/euclid_gcd.f90)
 * [factorial](/maths/factorial.f90)
+* [fibonacci](/maths/fibonacci.f90)
 ## Simple Examples
 * [hello_world](/simple_eg/hello_world.f90)
 * [calc_circle](/simple_eg/hello_world.f90)
