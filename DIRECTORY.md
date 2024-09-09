@@ -12,3 +12,5 @@
 ## Sorts
 * [bubble_sort](/sorts/bubble_sort.f90)
 * [recursive_bubble_sort](/sorts/recursive_bubble_sort.f90)
+* [merge_sort](/sorts/merge_sort.f90)
+* [example_usage_merge_sort](/sorts/example_usage_merge_sort.f90)
