@@ -16,6 +16,4 @@
 * [example_usage_merge_sort](/sorts/example_usage_merge_sort.f90)
 * [heap_sort](/sorts/heap_sort.f90)
 * [example_usage_heap_sort](/sorts/example_usage_heap_sort.f90)
-* [gnome_sort](/sorts/gnome_sort.f90)
-* [example_usage_gnome_sort](/sorts/example_usage_gnome_sort.f90)
-* [tests_gnome_sort](/sorts/tests_gnome_sort.f90)
+* [tests_heap_sort](/sorts/tests_heap_sort.f90)
