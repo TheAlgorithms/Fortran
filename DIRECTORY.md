@@ -21,4 +21,5 @@
 * [example_usage_gnome_sort](/sorts/example_usage_gnome_sort.f90)
 * [tests_gnome_sort](/sorts/tests_gnome_sort.f90)
 * [quick_sort](/sorts/quick_sort.f90)
-* [example_usage_quick_sort](/sorts/example_usage_quick_sort.f90) 
+* [example_usage_quick_sort](/sorts/example_usage_quick_sort.f90)
+* [tests_quick_sort](/sorts/tests_quick_sort.f90)
