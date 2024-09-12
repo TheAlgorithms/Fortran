@@ -49,14 +49,14 @@ program tests_heap_sort
     array = (/ 7, 7, 7, 7, 7 /)
     call run_test(array)
 
-    ! Test 6: Array with alternating high and low values
+    ! Test 7: Array with alternating high and low values
     print *, "Test 7: Array with alternating high and low values"
     if (allocated(array)) deallocate(array)
     allocate(array(6))
     array = (/ 1, 1000, 2, 999, 3, 998 /)
     call run_test(array)
 
-    ! Test 7: Empty array
+    ! Test 8: Empty array
     print *, "Test 8: Empty array"
     if (allocated(array)) deallocate(array)
     allocate(array(0))
