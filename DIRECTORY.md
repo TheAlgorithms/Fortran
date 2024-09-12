@@ -25,3 +25,4 @@
 * [tests_quick_sort](/sorts/tests_quick_sort.f90)
 * [radix_sort](/sorts/gnome_sort.f90)
 * [example_usage_radix_sort](/sorts/example_usage_radix_sort.f90)
+* [tests_radix_sort](/sorts/tests_radix_sort.f90)

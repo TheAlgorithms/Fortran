@@ -23,7 +23,7 @@ contains
         implicit none
         integer, dimension(:), intent(inout) :: array   ! Input/output array to be sorted
         integer, intent(in) :: n                        ! Size of the array
-        integer, intent(in) :: base                      ! Base (radix) for sorting
+        integer, intent(in) :: base                     ! Base (radix) for sorting
         integer :: max_digit, exp
 
         ! Check if base is valid
