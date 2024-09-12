@@ -78,7 +78,7 @@ contains
         end do
 
         ! Call quick_sort
-        call quick_sort(array, 1, n)    ! 1: low bound & n: high bounds of the array
+        call quick_sort(array, 1, n)    ! (1: low bound , n: high bound) of the array
 
         ! Print sorted array
         print *, "Sorted array:"

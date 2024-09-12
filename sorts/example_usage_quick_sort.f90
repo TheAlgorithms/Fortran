@@ -19,10 +19,7 @@ program test_quick_sort
     end do
 
     ! Call quick_sort from the module to sort the array
-    ! Call quick_sort from the module to sort the array
-    ! The parameters 1 and n specify the indices for the low and high bounds of the array, respectively,
-    ! as defined in the quick_sort_module.
-    call quick_sort(array, 1, n)
+    call quick_sort(array, 1, n)        ! (1: low bound , n: high bound) of the array
 
     ! Print the sorted array
     print *, "Sorted array:"
