@@ -109,10 +109,11 @@ end program addNumbers
 - Try to fit your work into the existing directory structure as much as possible. Please open an issue first if you want to create a new subdirectory.
 - Writing documentation, be concise, and check your spelling and grammar.
 - Add a corresponding explanation to [Algorithms-Explanation](https://github.com/TheAlgorithms/Algorithms-Explanation) (optional but recommended).
+- Implementing the modules is not just enough. We strongly recommend you make an [example usage](https://github.com/TheAlgorithms/Fortran/tree/main/examples) and a [test file](https://github.com/TheAlgorithms/Fortran/tree/main/tests) of your code, and put it under the "examples" and "tests" directories, under the category of your algorithm.
 - Most importantly, **be consistent in the use of these guidelines**.
 
 **Happy coding!**
 
 ---
 
-Authors: [@SatinWuker](https://github.com/SatinWuker)
+Authors: [@SatinWukerORIG](https://github.com/SatinWukerORIG)
