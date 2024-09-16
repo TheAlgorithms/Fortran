@@ -1,4 +1,4 @@
-!> Test program for the Quick Sort algorithm
+!> Example program for the Quick Sort algorithm
 !! This program demonstrates the use of the quick_sort_module by sorting an array of integers.
 
 program test_quick_sort
@@ -19,7 +19,7 @@ program test_quick_sort
     end do
 
     ! Call quick_sort from the module to sort the array
-    call quick_sort(array, 1, n)
+    call quick_sort(array, 1, n)        ! (1: low bound , n: high bound) of the array
 
     ! Print the sorted array
     print *, "Sorted array:"
