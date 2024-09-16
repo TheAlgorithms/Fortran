@@ -11,7 +11,7 @@ program tests_merge_sort
 
     ! Test 1: Repeated elements
     print *, "Test 1: Array with repeated elements"
-    array = (/ 4, 2, 7, 13, 0, 17, 6, 12, 11, 8, 5, 9 /)
+    array = (/ 4, 2, 7, 3, 1, 4, 9, 5, 10, 9, 2, 1/)
     call run_test(array)
 
     ! Test 2: Already sorted array
