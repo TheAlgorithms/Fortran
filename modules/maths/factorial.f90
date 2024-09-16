@@ -1,14 +1,14 @@
-!> Factorial Function
+!> Factorial Module
+!! This module implements factorial calculation functions.
 !! https://en.wikipedia.org/wiki/Factorial
-!! The program takes an integer input and returns the factorial of that number.
-!! If the input is less than 1, the function returns 1.
-program factorial_program
+!! The module contains two functions: one for calculating factorial iteratively
+!! and another one recursively.
+
+module factorial_module
     implicit none
 
-    Print*, factorial(5)
-    Print*, recursive_factorial(5)
-
 contains
+
     !! This function calculates the factorial of a given number using a loop.
     function factorial(number) result(factorial_number)
         integer, intent(in) :: number               !! Number to calculate factorial of
@@ -37,4 +37,5 @@ contains
         end if
 
     end function recursive_factorial
-end program factorial_program
+
+end module factorial_module
