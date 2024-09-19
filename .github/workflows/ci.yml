@@ -42,4 +42,8 @@ jobs:
       - name: Test
         working-directory: ${{env.build_path}}
         run: ctest
+
+      - name: Run examples
+        working-directory: ${{env.build_path}}
+        run: make run_all_examples
 ...
