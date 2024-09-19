@@ -1,47 +1,34 @@
-!> Recursive Linear Search
+!> Recursive Linear Search Module
 !!
-!! This is the recursive implementation of the linear search algorithm in Fortran.
+!! This module contains a recursive implementation of the linear search algorithm.
+!! It includes the `recursive_linear_search` function to search for a target value within a given collection.
 
-program recursive_linear_search_program
+module recursive_linear_search_module
     implicit none
+contains
 
-    integer, dimension(5) :: array
-
-    array = (/ 306, 1005, 5, 62, 0 /)
-
-    !! Search for the number 62 in array.
-    print*, "Target = 62: ", recursive_linear_search(array, size(array), 62) !! Prints 4.
-
-    !! Search for the number 10 in array.
-    print*, "Target = 10: ", recursive_linear_search(array, size(array), 10) !! Prints -1 because item 10 is not found.
-
-contains 
-
-    !! This function recursively searches for a target in a given collection.
+    !! This recursive function searches for a target in a collection.
     !! Returns the index of the found target or -1 if target is not found.
     recursive function recursive_linear_search(collection, index, target) result(target_index)
-    !! recursive keyword declares that the function is recursive.
-    !! result keyword specifies the function result.
-    
-        integer, dimension(:), intent(in) :: collection      !! A collection for elements of type integer
-        integer, intent(in)               :: index           !! Initially collection size.
-        integer, intent(in)               :: target          !! Target value to be searched.
-        integer                           :: target_index    !! Target's index in the collection to return.
+        integer, dimension(:), intent(in) :: collection  !! A collection of integer elements
+        integer, intent(in)               :: index       !! The current index in the collection
+        integer, intent(in)               :: target      !! The target value to be searched
+        integer                           :: target_index !! The index where the target is found
 
-        !! Stop recursive calls with "if size is 0 and item not found" base condition.
+        !! Base case: if index is 0 and target is not found, return -1
         if (index .eq. 0) then
             target_index = -1
             return
         end if
 
+        !! Check if the target is at the current index
         if (collection(index) .eq. target) then
-            !! Set target index if target found.
             target_index = index
-        else 
-            !! Recursively call the function with (index - 1) for index argument.
+        else
+            !! Recursively search in the remaining part of the collection
             target_index = recursive_linear_search(collection, index-1, target)
         end if
 
     end function recursive_linear_search
 
-end program recursive_linear_search_program
+end module recursive_linear_search_module
