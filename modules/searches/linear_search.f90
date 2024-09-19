@@ -1,25 +1,14 @@
 !> Linear Search
-!!
-!! This is an implementation of the linear search algorithm in Fortran.
+!> Module implementing the linear search algorithm in Fortran.
 
-program linear_search_program
+module linear_search_module
     implicit none
 
-    integer, dimension(5) :: array
-
-    array = (/ 540, 6, 10, 100, 3 /)
-
-    !! Search for the number 6 in array.
-    print*, "Target = 6: ", linear_search(array, 6) !! Prints 2.
-
-    !! Search for the number 5 in array.
-    print*, "Target = 5: ", linear_search(array, 5) !! Prints -1 because item 5 is not found.
-
-contains 
+contains
 
     !! This function searches for a target in a given collection.
     !! Returns the index of the found target or -1 if target is not found.
-    function linear_search (collection, target) result(target_index) !! result keyword used to specify function result.
+    function linear_search (collection, target) result(target_index)
         integer, dimension(:), intent(in) :: collection   !! A collection for elements of type integer
         integer, intent(in)               :: target       !! Target value to be searched.
         integer                           :: target_index !! Target's index in the collection to return.
@@ -39,5 +28,4 @@ contains
 
     end function linear_search
 
-end program linear_search_program
-
+end module linear_search_module
