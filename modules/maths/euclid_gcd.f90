@@ -1,30 +1,16 @@
-!> GCD of 2 numbers using Euclid algorithm
+!> Module implementing the Euclidean Algorithm for GCD
 !! Reference: https://en.wikipedia.org/wiki/Euclidean_algorithm
 
-program euclid_gcd
-    use, intrinsic :: iso_fortran_env, only : input_unit, error_unit
+module gcd_module
     implicit none
-    integer :: a, b, val, istat
-    character(len=1024) :: msg
+contains
 
-    print *, "Enter the two numbers (+ve integers): "
-    ! The following model of reading input is not necessary.
-    ! ----------
-    read(unit=input_unit, fmt=*, iostat=istat, iomsg=msg) a, b
-    if (istat /= 0) then
-        write(error_unit, fmt='(2A)') 'error: ', trim(msg)
-        stop 1
-    end if
-    ! ----------
-    ! Above section can be replaced with following if error handling is not required.
-    ! read *, a, b
-    val = gcd(a, b)
-    print *, 'The greatest common divisor is: ', val
-
-    contains
-    function gcd(a,b) result(val)
+    !! Function to compute the GCD of two integers using the Euclidean algorithm
+    function gcd(a, b) result(val)
         integer, value :: a, b
         integer :: t, val
+
+        ! Euclidean algorithm for GCD
         do while (b /= 0)
             t = b
             b = mod(a, b)
@@ -32,4 +18,5 @@ program euclid_gcd
         end do
         val = a
     end function gcd
-end program euclid_gcd
+
+end module gcd_module
