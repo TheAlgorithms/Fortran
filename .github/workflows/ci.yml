@@ -1,0 +1,49 @@
+---
+name: ci
+
+'on':
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+env:
+  build_path: ${{github.workspace}}/build
+
+jobs:
+  build_and_test:
+    runs-on: ${{matrix.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, ubuntu-24.04]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Display versions
+        run: |
+          gfortran --version
+          cmake --version
+
+      - name: Create Build Directory
+        run: cmake -E make_directory ${{env.build_path}}
+
+      - name: Configure CMake
+        working-directory: ${{env.build_path}}
+        run: cmake ../
+
+      - name: Build
+        working-directory: ${{env.build_path}}
+        run: cmake --build .
+
+      - name: Test
+        working-directory: ${{env.build_path}}
+        run: ctest
+
+      - name: Run examples
+        working-directory: ${{env.build_path}}
+        run: make run_all_examples
+...

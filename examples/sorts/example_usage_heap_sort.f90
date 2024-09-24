@@ -11,7 +11,6 @@ program test_heap_sort
 
     ! Initialize the test array
     array = (/ 12, 11, 13, 5, 6, 7, 3, 9, -1, 2, -12, 1 /)
-    n = size(array)
 
     ! Print the original array
     print *, "Original array:"
