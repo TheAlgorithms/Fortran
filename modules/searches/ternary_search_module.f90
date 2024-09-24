@@ -41,8 +41,8 @@ contains
         end if
 
         ! Divide array into three parts
-        mid1 = left + (right - left) / 3
-        mid2 = right - (right - left) / 3
+        mid1 = left + (right - left)/3
+        mid2 = right - (right - left)/3
 
         ! Check if the target is at mid1 or mid2
         if (arr(mid1) == target) then
@@ -93,8 +93,8 @@ contains
 
         ! Termination condition based on tolerance
         do while (r - l > tol)
-            mid1 = l + (r - l) / 3.0
-            mid2 = r - (r - l) / 3.0
+            mid1 = l + (r - l)/3.0
+            mid2 = r - (r - l)/3.0
 
             ! Compare function values at midpoints
             if (f(mid1) < f(mid2)) then
@@ -105,7 +105,7 @@ contains
         end do
 
         ! The minimum point is approximately at the midpoint
-        minimum = (l + r) / 2.0
+        minimum = (l + r)/2.0
     end function ternary_search_minimum
 
     !> Function-based ternary search to find the maximum of a unimodal function
@@ -134,8 +134,8 @@ contains
 
         ! Termination condition based on tolerance
         do while (r - l > tol)
-            mid1 = l + (r - l) / 3.0
-            mid2 = r - (r - l) / 3.0
+            mid1 = l + (r - l)/3.0
+            mid2 = r - (r - l)/3.0
 
             ! Compare function values at midpoints
             if (f(mid1) > f(mid2)) then
@@ -146,7 +146,7 @@ contains
         end do
 
         ! The maximum point is approximately at the midpoint
-        maximum = (l + r) / 2.0
+        maximum = (l + r)/2.0
     end function ternary_search_maximum
 
 end module ternary_search
