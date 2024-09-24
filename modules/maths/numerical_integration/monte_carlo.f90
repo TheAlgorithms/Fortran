@@ -43,11 +43,11 @@ contains
         end interface
 
         ! Allocate arrays for random samples and function values
-        allocate(uniform_sample(1:n), fx(1:n))
+        allocate (uniform_sample(1:n), fx(1:n))
 
         ! Generate uniform random points in [a, b]
         call random_number(uniform_sample)
-        uniform_sample = a + (b - a) * uniform_sample  !! Scale to the interval [a, b]
+        uniform_sample = a + (b - a)*uniform_sample  !! Scale to the interval [a, b]
 
         ! Evaluate the function at all random points in parallel
         !$omp parallel do           !! OpenMP parallelization to distribute the loop across multiple threads
@@ -61,13 +61,13 @@ contains
         sum_fx_squared = sum(fx**2)
 
         ! Compute the Monte Carlo estimate of the integral
-        integral_result = (b - a) * (sum_fx / real(n, dp))
+        integral_result = (b - a)*(sum_fx/real(n, dp))
 
         ! Estimate the error using the variance of the function values
-        error_estimate = sqrt((sum_fx_squared/n - (sum_fx/n)**2) / (n-1)) * (b-a)
+        error_estimate = sqrt((sum_fx_squared/n - (sum_fx/n)**2)/(n - 1))*(b - a)
 
         ! Deallocate arrays
-        deallocate(uniform_sample, fx)
+        deallocate (uniform_sample, fx)
 
     end subroutine monte_carlo
 

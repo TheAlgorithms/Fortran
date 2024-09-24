@@ -44,18 +44,18 @@ contains
 
         ! Check if n is even
         if (mod(n, 2) /= 0) then
-            write(*, *) 'Error: The number of panels (n) must be even.'
+            write (*, *) 'Error: The number of panels (n) must be even.'
             stop
         end if
 
         ! Step size
-        h = (b - a) / (1.0_dp*n)
+        h = (b - a)/(1.0_dp*n)
 
         ! Allocate arrays
-        allocate(x(0:n), fx(0:n))
+        allocate (x(0:n), fx(0:n))
 
         ! Create an array of x values, contains the endpoints and the midpoints.
-        x = [(a + i * h, i = 0, n)]
+        x = [(a + i*h, i=0, n)]
 
         ! Apply the function to each x value
         do i = 0, n
@@ -63,10 +63,10 @@ contains
         end do
 
         ! Apply Simpson's rule using array slicing
-        integral_result = (fx(0) + fx(n) + 4.0_dp * sum(fx(1: n-1: 2)) + 2.0_dp * sum(fx(2: n-2: 2))) * (h / 3.0_dp)
+        integral_result = (fx(0) + fx(n) + 4.0_dp*sum(fx(1:n - 1:2)) + 2.0_dp*sum(fx(2:n - 2:2)))*(h/3.0_dp)
 
         ! Deallocate arrays
-        deallocate(x, fx)
+        deallocate (x, fx)
     end subroutine simpson
 
 end module simpson_rule

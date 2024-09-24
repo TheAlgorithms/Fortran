@@ -21,7 +21,7 @@ program example_midpoint
     ! Call the midpoint rule subroutine with the function passed as an argument
     call midpoint(integral_result, a, b, n, func)
 
-    write(*, '(A, F12.6)') "Midpoint rule yields: ", integral_result  !! ≈ 0.858196
+    write (*, '(A, F12.6)') "Midpoint rule yields: ", integral_result  !! ≈ 0.858196
 
 contains
 
@@ -30,7 +30,7 @@ contains
         real(dp), intent(in) :: x
         real(dp) :: fx
 
-        fx = exp(-x**2) * cos(2.0_dp * x)       !! Example function to integrate
+        fx = exp(-x**2)*cos(2.0_dp * x)       !! Example function to integrate
     end function func
 
 end program example_midpoint

@@ -22,7 +22,7 @@ program example_monte_carlo
     ! Call Monte Carlo integration
     call monte_carlo(integral_result, error_estimate, a, b, n, func)
 
-    write(*, '(A, F12.6, A, F12.6)') "Monte Carlo result: ", integral_result, " +- ", error_estimate     !! ≈ 0.858421
+    write (*, '(A, F12.6, A, F12.6)') "Monte Carlo result: ", integral_result, " +- ", error_estimate     !! ≈ 0.858421
 
 contains
 
