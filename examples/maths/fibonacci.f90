@@ -6,14 +6,9 @@ program example_fibonacci
     implicit none
     integer :: n
 
-    print *, 'Enter a number: '
-    read *, n
-    if (n <= 0) then
-        print *, 'Number must be a positive integer.'
-        stop 1
-    end if
+    n = 7
 
-    print *, 'The Fibonacci number for the specified position is:'
+    print *, 'The Fibonacci number for the position', n, ' is:'
     print *, 'Recursive solution: ', fib_rec(n)
     print *, 'Iterative solution: ', fib_itr(n)
 
