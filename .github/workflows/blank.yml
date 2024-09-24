@@ -1,0 +1,19 @@
+name: Code Style
+
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  fpm:
+    name: Fortran Code Formatting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4      
+      - name: Install fprettify
+        run: |
+          sudo apt-get install -y python3-pip
+          pip3 install fprettify
+      - name: Format Fortran files
+        run: |
+          fprettify --indent 4 -d --recursive .
