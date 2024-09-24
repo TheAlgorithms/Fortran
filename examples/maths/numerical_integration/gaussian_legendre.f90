@@ -22,7 +22,7 @@ program example_gaussian_quadrature
     ! Call Gaussian quadrature to compute the integral
     call gauss_legendre_quadrature(integral_result, a, b, n, func)
 
-    write(*, '(A, F12.6)') "Gaussian Quadrature result: ", integral_result          !! ≈ 0.858574
+    write (*, '(A, F12.6)') "Gaussian Quadrature result: ", integral_result          !! ≈ 0.858574
 
 contains
 
@@ -31,7 +31,7 @@ contains
         real(dp), intent(in) :: x
         real(dp) :: fx
 
-        fx = exp(-x**2) * cos(2.0_dp * x)       !! Example function to integrate
+        fx = exp(-x**2)*cos(2.0_dp * x)       !! Example function to integrate
     end function func
 
 end program example_gaussian_quadrature

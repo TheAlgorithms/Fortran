@@ -22,7 +22,7 @@ program example_simpson
     ! Call Simpson's rule with the function passed as an argument
     call simpson(integral_result, a, b, n, func)
 
-    write(*, '(A, F12.8)') "Simpson's rule yields: ", integral_result       !! ≈ 0.85819555
+    write (*, '(A, F12.8)') "Simpson's rule yields: ", integral_result       !! ≈ 0.85819555
 
 contains
 
@@ -31,7 +31,7 @@ contains
         real(dp), intent(in) :: x
         real(dp) :: fx
 
-        fx = exp(-x**2) * cos(2.0_dp * x)       !! Example function to integrate
+        fx = exp(-x**2)*cos(2.0_dp * x)       !! Example function to integrate
     end function func
 
 end program example_simpson

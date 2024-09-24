@@ -42,13 +42,13 @@ contains
         end interface
 
         ! Step size
-        h = (b - a) / (1.0_dp*n)
+        h = (b - a)/(1.0_dp*n)
 
         ! Allocate arrays
-        allocate(x(0:n), fx(0:n))
+        allocate (x(0:n), fx(0:n))
 
         ! Create an array of x values
-        x = [(a + i * h, i = 0, n)]
+        x = [(a + i*h, i=0, n)]
 
         ! Apply the function to each x value
         do i = 0, n
@@ -56,10 +56,10 @@ contains
         end do
 
         ! Apply trapezoidal rule using array slicing
-        integral_result = ((fx(0) + fx(n)) * 0.5_dp + sum(fx(1: n))) * h
+        integral_result = ((fx(0) + fx(n))*0.5_dp + sum(fx(1:n)))*h
 
         ! Deallocate arrays
-        deallocate(x, fx)
+        deallocate (x, fx)
     end subroutine trapezoid
 
 end module trapezoidal_rule

@@ -49,10 +49,10 @@ contains
         call gauss_legendre_weights(t, w, n)
 
         ! Allocate the function value array
-        allocate(fx(n))
+        allocate (fx(n))
 
         ! Transform the nodes from the reference interval [-1, 1] to [a, b]
-        x = (b + a) / 2.0_dp + (b - a) * t / 2.0_dp
+        x = (b + a)/2.0_dp + (b - a)*t/2.0_dp
 
         ! Compute function values at the transformed points
         do i = 1, n
@@ -60,10 +60,10 @@ contains
         end do
 
         ! Apply the Gaussian-Legendre quadrature formula
-        integral_result = sum(w * fx) * (b - a) / 2.0_dp
+        integral_result = sum(w*fx)*(b - a)/2.0_dp
 
         ! Deallocate fx array
-        deallocate(fx)
+        deallocate (fx)
 
     end subroutine gauss_legendre_quadrature
 
@@ -74,7 +74,7 @@ contains
         real(dp), intent(out), dimension(n) :: t, w  !! Nodes (t) and weights (w)
 
         ! Predefined nodes and weights for different values of n
-        select case(n)
+        select case (n)
         case (1)
             t = [0.0_dp]        !! Single node at the center for n = 1
             w = [2.0_dp]        !! Weight of 2 for the single point
