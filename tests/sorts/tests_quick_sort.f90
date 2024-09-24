@@ -6,7 +6,6 @@ program tests_quick_sort
 
     use quick_sort_module
     implicit none
-    integer :: i
     integer, dimension(:), allocatable :: array
 
     ! Test 1: Repeated elements

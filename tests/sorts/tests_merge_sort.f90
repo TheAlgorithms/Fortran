@@ -6,7 +6,6 @@ program tests_merge_sort
 
     use merge_sort_module
     implicit none
-    integer :: i
     integer, dimension(:), allocatable :: array
 
     ! Test 1: Repeated elements
