@@ -26,7 +26,7 @@ contains
         integer :: i
 
         ! Build the max heap
-        do i = n / 2, 1, -1
+        do i = n/2, 1, -1
             call heapify(array, n, i)
         end do
 
@@ -50,8 +50,8 @@ contains
         integer :: largest, left, right
 
         largest = i
-        left = 2 * i
-        right = 2 * i + 1
+        left = 2*i
+        right = 2*i + 1
 
         ! Is Left Child is larger than Root?
         if (left <= n .and. array(left) > array(largest)) then
