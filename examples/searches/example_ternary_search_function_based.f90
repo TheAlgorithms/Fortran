@@ -2,7 +2,6 @@
 ! This program demonstrates how to use the function-based ternary search algorithm
 ! from the `ternary_search` module to find the minimum and maximum of unimodal functions.
 
-
 program ternary_search_function_based
     use ternary_search
     implicit none

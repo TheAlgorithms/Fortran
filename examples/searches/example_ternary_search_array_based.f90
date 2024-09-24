@@ -2,7 +2,6 @@
 ! This program demonstrates how to use the array-based ternary search algorithm
 ! implemented in the `ternary_search` module to find a target element in a sorted array.
 
-
 program example_ternary_search_array
     use ternary_search
     implicit none
