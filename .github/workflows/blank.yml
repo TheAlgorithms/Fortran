@@ -23,6 +23,6 @@ jobs:
              echo "please reformat/fprettify these files:"
              git status --porcelain=v1
              echo "exact diff:"
-             fprettify -i 4 -r -d .
+             git diff
              exit 1
-          fi
+          fi          
