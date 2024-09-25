@@ -17,6 +17,7 @@ jobs:
       - name: Format Fortran files
         run: |
           fprettify -i 4 -d --recursive .
+          git add .
       - name: Fail if needs reformatting
         run: |
           if [[ $(git status --porcelain) ]]; then
