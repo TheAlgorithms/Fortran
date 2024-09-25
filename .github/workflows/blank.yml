@@ -16,4 +16,13 @@ jobs:
           pip3 install fprettify
       - name: Format Fortran files
         run: |
-          fprettify --indent 4 -d --recursive .
+          fprettify -i 4 -d --recursive .
+      - name: Fail if needs reformatting
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+             echo "please reformat/fprettify these files:"
+             git status --porcelain=v1
+             echo "exact diff:"
+             fprettify -i 4 -r -d . 2>&1
+             exit 1
+          fi
