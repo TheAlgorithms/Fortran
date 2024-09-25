@@ -16,7 +16,7 @@ jobs:
           pip3 install fprettify
       - name: Format Fortran files
         run: |
-          fprettify -i 4 -d --recursive .
+          fprettify -i 4 --recursive .
           git add .
       - name: Fail if needs reformatting
         run: |
