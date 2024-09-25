@@ -16,15 +16,8 @@ jobs:
           pip3 install fprettify
       - name: Format Fortran files
         run: |
-          fprettify -i 4 -d --recursive .
-          # Check if files were modified and stage them for commit
-          git diff --exit-code
-          if [ $? -ne 0 ]; then
-              echo "Files were modified by fprettify, adding changes."
-              git add .
-          else
-              echo "No files were modified."
-          fi
+          fprettify -i 4 -d --recursive . 2>&1
+          git add .
       - name: Fail if needs reformatting
         run: |
           # Check if there are uncommitted changes
