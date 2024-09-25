@@ -41,7 +41,7 @@ jobs:
 
       - name: Test
         working-directory: ${{env.build_path}}
-        run: ctest --output-on-failure
+        run: ctest --output-on-failure --extra-verbose
 
       - name: Run examples
         working-directory: ${{env.build_path}}
