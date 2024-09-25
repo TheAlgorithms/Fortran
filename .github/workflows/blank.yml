@@ -16,15 +16,22 @@ jobs:
           pip3 install fprettify
       - name: Format Fortran files
         run: |
-          fprettify -i 4 --recursive .
+          fprettify -i 4 -d --recursive .
           git add .
       - name: Fail if needs reformatting
         run: |
+          # Check if there are uncommitted changes
           if [[ $(git status --porcelain) ]]; then
              echo "please reformat/fprettify these files:"
              git status --porcelain=v1
              echo "exact diff:"
-             fprettify -i 4 -d --recursive . 
-             git diff                        
+             
+             # Show the formatting changes with fprettify
+             fprettify -i 4 -d --recursive .  # This will display debug output
+
+             # Display the git diff
+             git diff
              exit 1
-          fi          
+          else
+             echo "All files are properly formatted."
+          fi     
