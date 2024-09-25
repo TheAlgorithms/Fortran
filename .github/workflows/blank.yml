@@ -19,19 +19,11 @@ jobs:
           fprettify -i 4 -d --recursive . 2>&1
           git add .
       - name: Fail if needs reformatting
-        run: |
-          # Check if there are uncommitted changes
-          if [[ $(git status --porcelain) ]]; then
+        run: |                  
              echo "please reformat/fprettify these files:"
              git status --porcelain=v1
              echo "exact diff:"
-             
-             # Show the formatting changes with fprettify
-             fprettify -i 4 -d --recursive .  # This will display debug output
-
-             # Display the git diff
+                          
+             fprettify -i 4 -d --recursive .              
              git diff
-             exit 1
-          else
-             echo "All files are properly formatted."
-          fi     
+             exit 1                       
