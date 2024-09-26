@@ -15,15 +15,17 @@ jobs:
           sudo apt-get install -y python3-pip
           pip3 install fprettify
       - name: Format Fortran files
+        id: format
         run: |
-          fprettify -i 4 --recursive .
-          git add .
-      - name: Fail if needs reformatting
-        run: |                  
-             echo "please reformat/fprettify these files:"
-             git status --porcelain=v1
-             echo "exact diff:"
-                          
-             fprettify -i 4 -d --recursive .              
-             git diff
-             exit 1                       
+          # Run fprettify and capture output
+          output=$(fprettify -i 4 --recursive .)
+          echo "$output"
+          # Check if there were any changes
+          if [[ $(git status --porcelain) ]]; then
+            echo "Files were modified:"
+            echo "$output"
+            git diff
+            exit 1
+          else
+            echo "All files are properly formatted."
+          fi                   
