@@ -19,7 +19,8 @@ jobs:
         run: |          
           output=$(fprettify -i 4 --recursive .)
           echo "$output"
-      - name: Fail if needs reformatting          
+      - name: Fail if needs reformatting      
+        run: |  
           if [[ $(git status --porcelain) ]]; then            
             echo "please reformat/fprettify these files:"
             echo "$output"
