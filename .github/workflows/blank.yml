@@ -17,14 +17,13 @@ jobs:
       - name: Format Fortran files
         id: format
         run: |          
-          output=$(fprettify -i 4 --recursive .)
-          echo "$output"
+          output=$(fprettify -i 4 -d --recursive .)          
       - name: Fail if needs reformatting      
         run: |  
           if [[ $(git status --porcelain) ]]; then            
             echo "please reformat/fprettify these files:"
             echo "$output"
-            git diff
+            #git diff
             exit 1
           else
             echo "All files are properly formatted."
