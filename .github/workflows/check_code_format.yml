@@ -33,4 +33,8 @@ jobs:
              git status --porcelain=v1
              exit 1
           fi
+
+      - name: Exact diff of needed reformatting
+        if: failure()
+        run: git diff
 ...
