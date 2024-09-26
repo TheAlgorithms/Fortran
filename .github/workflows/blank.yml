@@ -16,13 +16,12 @@ jobs:
           pip3 install fprettify
       - name: Format Fortran files
         id: format
-        run: |
-          # Run fprettify and capture output
+        run: |          
           output=$(fprettify -i 4 --recursive .)
           echo "$output"
-          # Check if there were any changes
-          if [[ $(git status --porcelain) ]]; then
-            echo "Files were modified:"
+      - name: Fail if needs reformatting          
+          if [[ $(git status --porcelain) ]]; then            
+            echo "please reformat/fprettify these files:"
             echo "$output"
             git diff
             exit 1
