@@ -1,0 +1,40 @@
+---
+name: check_code_format
+
+'on':
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  check_format_code:
+    name: check format code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install fprettify
+        run: pip install fprettify
+
+      - name: Display fprettify version
+        run: fprettify --version
+
+      - name: Format code
+        run: |
+          git clean -f -x -d
+          fprettify --indent 4 --recursive .
+
+      - name: Fail if needs reformatting
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+             echo "please reformat/fprettify these files:"
+             git status --porcelain=v1
+             exit 1
+          fi
+
+      - name: Exact diff of needed reformatting
+        if: failure()
+        run: git diff
+...

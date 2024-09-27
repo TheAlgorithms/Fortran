@@ -9,7 +9,7 @@ program test_gnome_sort
     integer :: n, i
 
     ! Initialize the test array
-    array = (/ -5, 2, 9, 1, 5, 6, -7, 8, 15, -20 /)
+    array = (/-5, 2, 9, 1, 5, 6, -7, 8, 15, -20/)
     n = size(array)
 
     ! Call gnome_sort from the module to sort the array

@@ -13,7 +13,7 @@ program test_radix_sort
 
     ! Test for base 10
     print *, "Testing Radix Sort with base 10:"
-    array = (/ 170, 45, 75, 90, 802, 24, 2, 66, 15, 40 /)
+    array = (/170, 45, 75, 90, 802, 24, 2, 66, 15, 40/)
     n = size(array)
     call radix_sort(array, n, base10)
     print *, "Sorted array in base 10:"
@@ -23,7 +23,7 @@ program test_radix_sort
 
     ! Test for base 2
     print *, "Testing Radix Sort with base 2:"
-    array = (/ 1010, 1101, 1001, 1110, 0010, 0101, 1111, 0110, 1000, 0001 /) ! Binary values whose decimal: (/ 10, 13, 9, 14, 2, 5, 15, 6, 8, 1 /)
+    array = (/1010, 1101, 1001, 1110, 0010, 0101, 1111, 0110, 1000, 0001/) ! Binary values whose decimal: (/ 10, 13, 9, 14, 2, 5, 15, 6, 8, 1 /)
     n = size(array)
     call radix_sort(array, n, base2)
     print *, "Sorted binary array in Decimal:"
@@ -33,7 +33,7 @@ program test_radix_sort
 
     ! Test for base 16
     print *, "Testing Radix Sort with base 16:"
-    array = (/ 171, 31, 61, 255, 16, 5, 211, 42, 180, 0 /)  ! Hexadecimal values as decimal
+    array = (/171, 31, 61, 255, 16, 5, 211, 42, 180, 0/)  ! Hexadecimal values as decimal
     n = size(array)
     call radix_sort(array, n, base16)
     print *, "Sorted hexadecimal array in Decimal:"

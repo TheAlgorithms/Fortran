@@ -9,7 +9,7 @@ program test_quick_sort
     integer :: n, i
 
     ! Initialize the test array
-    array = (/ 10, 7, 8, 9, 1, 5, -2, 12, 0, -5 /)
+    array = (/10, 7, 8, 9, 1, 5, -2, 12, 0, -5/)
     n = size(array)
 
     ! Print the original array

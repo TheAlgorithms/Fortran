@@ -19,7 +19,7 @@ contains
 
         factorial_number = 1
         do while (counter > 1)
-            factorial_number = factorial_number * counter
+            factorial_number = factorial_number*counter
             counter = counter - 1
         end do
 
@@ -33,7 +33,7 @@ contains
         if (number .lt. 1) then
             factorial_number = 1
         else
-            factorial_number = number * recursive_factorial(number - 1)
+            factorial_number = number*recursive_factorial(number - 1)
         end if
 
     end function recursive_factorial
