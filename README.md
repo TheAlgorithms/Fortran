@@ -23,7 +23,7 @@
   [![HitCount](https://hits.dwyl.com/TheAlgorithms/Fortran.svg?style=flat-square)](http://hits.dwyl.com/TheAlgorithms/Fortran)
   <!-- Second row: -->
   <br>
-  <a href="https://github.com/TheAlgorithms/Fortran/actions">    
+  <a href="https://github.com/TheAlgorithms/Fortran/actions">
     <img src="https://img.shields.io/github/actions/workflow/status/TheAlgorithms/Fortran/ci.yml?branch=main&label=CI&logo=github&style=flat-square" height="20" alt="GitHub Workflow Status">
   </a>
   <a href="https://github.com/pre-commit/pre-commit">
