@@ -6,6 +6,7 @@ add_compile_options(
     -Wextra
     -Wpedantic
     -Wconversion-extra
+    -Wsurprising
     -Werror)
 
 function(add_fortran_sources DIR SOURCES)
