@@ -93,8 +93,8 @@ contains
 
         ! Termination condition based on tolerance
         do while (r - l > tol)
-            mid1 = l + (r - l)/3.0
-            mid2 = r - (r - l)/3.0
+            mid1 = l + (r - l)/3.0d0
+            mid2 = r - (r - l)/3.0d0
 
             ! Compare function values at midpoints
             if (f(mid1) < f(mid2)) then
@@ -105,7 +105,7 @@ contains
         end do
 
         ! The minimum point is approximately at the midpoint
-        minimum = (l + r)/2.0
+        minimum = (l + r)/2.0d0
     end function ternary_search_minimum
 
     !> Function-based ternary search to find the maximum of a unimodal function
@@ -134,8 +134,8 @@ contains
 
         ! Termination condition based on tolerance
         do while (r - l > tol)
-            mid1 = l + (r - l)/3.0
-            mid2 = r - (r - l)/3.0
+            mid1 = l + (r - l)/3.0d0
+            mid2 = r - (r - l)/3.0d0
 
             ! Compare function values at midpoints
             if (f(mid1) > f(mid2)) then
@@ -146,7 +146,7 @@ contains
         end do
 
         ! The maximum point is approximately at the midpoint
-        maximum = (l + r)/2.0
+        maximum = (l + r)/2.0d0
     end function ternary_search_maximum
 
 end module ternary_search
