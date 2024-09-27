@@ -7,6 +7,7 @@ add_compile_options(
     -Wpedantic
     -Waliasing
     -Wconversion-extra
+    -Wimplicit-interface
     -Wsurprising
     -Werror)
 
