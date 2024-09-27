@@ -1,4 +1,5 @@
 !> Example Program for Trapezoidal Rule
+!!
 !! This program demonstrates the use of the Trapezoidal rule for numerical integration.
 !!
 !! It sets the integration limits and number of panels, and calls the
@@ -17,7 +18,7 @@ program example_tapezoid
     ! Set the integration limits and number of panels
     a = -1.0_dp
     b = 1.0_dp
-    n = 1E6     !! Number of subdivisions
+    n = 1000000     !! 1E6 Number of subdivisions
 
     ! Call the trapezoidal rule with the function passed as an argument
     call trapezoid(integral_result, a, b, n, func)

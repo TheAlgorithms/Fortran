@@ -49,13 +49,13 @@ contains
         end if
 
         ! Step size
-        h = (b - a)/(1.0_dp*n)
+        h = (b - a)/real(n, dp)
 
         ! Allocate arrays
         allocate (x(0:n), fx(0:n))
 
         ! Create an array of x values, contains the endpoints and the midpoints.
-        x = [(a + i*h, i=0, n)]
+        x = [(a + (real(i, dp))*h, i=0, n)]
 
         ! Apply the function to each x value
         do i = 0, n

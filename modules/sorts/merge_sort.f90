@@ -1,5 +1,5 @@
 !> Merge Sort Algorithm
-
+!!
 !> This module implements the Merge Sort algorithm.
 !!
 !! Merge Sort is a divide-and-conquer algorithm. It divides the input array into two halves, recursively sorts them,
@@ -14,7 +14,7 @@
 !! - A sorted array of integers.
 !!
 module merge_sort_module
-implicit none
+    implicit none
 
 contains
 
@@ -23,21 +23,21 @@ contains
         implicit none
         integer, dimension(:), intent(inout) :: array   ! Input/output array to be sorted
         integer, intent(in) :: n                        ! Size of the array
-        integer :: middle, i
+        integer :: middle
         integer, dimension(:), allocatable :: left_half, right_half, sorted_array
 
         ! Base case: return if the array has 1 or fewer elements
         if (n <= 1) return
 
         ! Calculate the middle point to split the array
-        middle = n / 2
+        middle = n/2
 
         ! Allocate space for the two halves
-        allocate(left_half(middle), right_half(n - middle), sorted_array(n))
+        allocate (left_half(middle), right_half(n - middle), sorted_array(n))
 
         ! Split array into two halves
         left_half = array(1:middle)
-        right_half = array(middle+1:n)
+        right_half = array(middle + 1:n)
 
         ! Recursively sort each half
         call merge_sort(left_half, middle)
@@ -50,7 +50,7 @@ contains
         array = sorted_array
 
         ! Deallocate the temporary arrays
-        deallocate(left_half, right_half, sorted_array)
+        deallocate (left_half, right_half, sorted_array)
 
     end subroutine merge_sort
 

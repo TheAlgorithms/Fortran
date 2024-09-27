@@ -41,13 +41,13 @@ contains
         end interface
 
         ! Step size
-        h = (b - a)/(1.0_dp*n)
+        h = (b - a)/real(n, dp)
 
         ! Allocate array for midpoints
         allocate (x(1:n), fx(1:n))
 
         ! Calculate midpoints
-        x = [(a + (i - 0.5_dp)*h, i=1, n)]
+        x = [(a + (real(i, dp) - 0.5_dp)*h, i=1, n)]
 
         ! Apply function to each midpoint
         do i = 1, n

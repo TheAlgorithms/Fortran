@@ -28,6 +28,7 @@ contains
     subroutine monte_carlo(integral_result, error_estimate, a, b, n, func)
         implicit none
         integer, intent(in) :: n
+        real(dp) :: n_dp            !! Hold n as double precision
         real(dp), intent(in) :: a, b
         real(dp), intent(out) :: integral_result, error_estimate
 
@@ -64,7 +65,8 @@ contains
         integral_result = (b - a)*(sum_fx/real(n, dp))
 
         ! Estimate the error using the variance of the function values
-        error_estimate = sqrt((sum_fx_squared/n - (sum_fx/n)**2)/(n - 1))*(b - a)
+        n_dp = real(n, dp)
+        error_estimate = sqrt((sum_fx_squared/n_dp - (sum_fx/n_dp)**2)/(n_dp - 1))*(b - a)
 
         ! Deallocate arrays
         deallocate (uniform_sample, fx)

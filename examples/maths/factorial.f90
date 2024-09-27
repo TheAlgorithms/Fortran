@@ -7,7 +7,7 @@ program factorial_program
     use factorial_module
     implicit none
 
-    Print*, factorial(5)
-    Print*, recursive_factorial(5)
+    Print *, factorial(5)
+    Print *, recursive_factorial(5)
 
 end program factorial_program
