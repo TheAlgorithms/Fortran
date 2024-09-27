@@ -1,5 +1,5 @@
 !> Merge Sort Algorithm
-
+!!
 !> This module implements the Merge Sort algorithm.
 !!
 !! Merge Sort is a divide-and-conquer algorithm. It divides the input array into two halves, recursively sorts them,

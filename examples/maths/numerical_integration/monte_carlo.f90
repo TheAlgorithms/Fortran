@@ -17,7 +17,7 @@ program example_monte_carlo
     ! Set the integration limits and number of random samples
     a = -1.0_dp
     b = 1.0_dp
-    n = 1E6     !! Number of random samples
+    n = 1000000     !! 1E6 Number of random samples
 
     ! Call Monte Carlo integration
     call monte_carlo(integral_result, error_estimate, a, b, n, func)
