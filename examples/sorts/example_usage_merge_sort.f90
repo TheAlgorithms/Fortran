@@ -9,7 +9,7 @@ program test_merge_sort
     integer :: n, i
 
     ! Initialize the test array
-    array = (/ -2, 3, -10, 11, 99, 100000, 100, -200 /)
+    array = (/-2, 3, -10, 11, 99, 100000, 100, -200/)
     n = size(array)
 
     ! Call merge_sort from the module to sort the array
