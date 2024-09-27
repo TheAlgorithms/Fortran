@@ -11,11 +11,11 @@ program recursive_bubble_sort_example
     !! Fill the array with random numbers.
     call random_number(array)
 
-    print*, "Before:", array
+    print *, "Before:", array
 
     !! Bubble sort subroutine call.
     call recursive_bubble_sort(array, size(array))
 
-    print*, "After:", array
+    print *, "After:", array
 
 end program recursive_bubble_sort_example

@@ -10,7 +10,7 @@ program test_heap_sort
     integer, dimension(n) :: array(n)   ! Test array
 
     ! Initialize the test array
-    array = (/ 12, 11, 13, 5, 6, 7, 3, 9, -1, 2, -12, 1 /)
+    array = (/12, 11, 13, 5, 6, 7, 3, 9, -1, 2, -12, 1/)
 
     ! Print the original array
     print *, "Original array:"

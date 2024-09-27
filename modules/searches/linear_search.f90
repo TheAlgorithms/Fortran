@@ -8,7 +8,7 @@ contains
 
     !! This function searches for a target in a given collection.
     !! Returns the index of the found target or -1 if target is not found.
-    function linear_search (collection, target) result(target_index)
+    function linear_search(collection, target) result(target_index)
         integer, dimension(:), intent(in) :: collection   !! A collection for elements of type integer
         integer, intent(in)               :: target       !! Target value to be searched.
         integer                           :: target_index !! Target's index in the collection to return.

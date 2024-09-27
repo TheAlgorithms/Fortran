@@ -37,9 +37,9 @@ contains
         exp = 1
 
         ! Perform Counting Sort for each digit
-        do while (max_digit / exp >= 1)
+        do while (max_digit/exp >= 1)
             call counting_sort(array, n, exp, base)
-            exp = exp * base
+            exp = exp*base
         end do
 
     end subroutine radix_sort
@@ -55,14 +55,14 @@ contains
         integer, dimension(:), allocatable :: count, output
 
         count_size = base
-        allocate(count(count_size), output(n))
+        allocate (count(count_size), output(n))
 
         ! Initialize count array
         count = 0
 
         ! Store count of occurrences
         do i = 1, n
-            digit = mod(array(i) / exp, base)
+            digit = mod(array(i)/exp, base)
             count(digit + 1) = count(digit + 1) + 1
         end do
 
@@ -73,7 +73,7 @@ contains
 
         ! Build the output array
         do i = n, 1, -1
-            digit = mod(array(i) / exp, base)
+            digit = mod(array(i)/exp, base)
             output(count(digit + 1)) = array(i)
             count(digit + 1) = count(digit + 1) - 1
         end do
@@ -82,7 +82,7 @@ contains
         array = output
 
         ! Deallocate temporary arrays
-        deallocate(count, output)
+        deallocate (count, output)
 
     end subroutine counting_sort
 

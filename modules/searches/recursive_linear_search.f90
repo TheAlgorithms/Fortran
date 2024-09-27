@@ -26,7 +26,7 @@ contains
             target_index = index
         else
             !! Recursively search in the remaining part of the collection
-            target_index = recursive_linear_search(collection, index-1, target)
+            target_index = recursive_linear_search(collection, index - 1, target)
         end if
 
     end function recursive_linear_search
