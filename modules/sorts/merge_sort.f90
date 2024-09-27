@@ -14,7 +14,7 @@
 !! - A sorted array of integers.
 !!
 module merge_sort_module
-implicit none
+    implicit none
 
 contains
 
@@ -30,14 +30,14 @@ contains
         if (n <= 1) return
 
         ! Calculate the middle point to split the array
-        middle = n / 2
+        middle = n/2
 
         ! Allocate space for the two halves
-        allocate(left_half(middle), right_half(n - middle), sorted_array(n))
+        allocate (left_half(middle), right_half(n - middle), sorted_array(n))
 
         ! Split array into two halves
         left_half = array(1:middle)
-        right_half = array(middle+1:n)
+        right_half = array(middle + 1:n)
 
         ! Recursively sort each half
         call merge_sort(left_half, middle)
@@ -50,7 +50,7 @@ contains
         array = sorted_array
 
         ! Deallocate the temporary arrays
-        deallocate(left_half, right_half, sorted_array)
+        deallocate (left_half, right_half, sorted_array)
 
     end subroutine merge_sort
 
