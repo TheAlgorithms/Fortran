@@ -1,12 +1,14 @@
-! Example Program: Function-based Ternary Search for Minimum and Maximum
-! This program demonstrates how to use the function-based ternary search algorithm
-! from the `ternary_search` module to find the minimum and maximum of unimodal functions.
+!> Example Program: Function-based Ternary Search for Minimum and Maximum
+!!
+!! This program demonstrates how to use the function-based ternary search algorithm
+!! from the `ternary_search` module to find the minimum and maximum of unimodal functions.
 
 program ternary_search_function_based
     use ternary_search
     implicit none
 
     ! Define the variables
+    integer, parameter :: dp = kind(0.0d0)  ! Define double precision kind
     real(8) :: result_min, result_max       ! Results for minimum and maximum values
     real(8) :: min_point, max_point         ! Points where minimum and maximum occur
     real(8) :: left, right, tol             ! Left and right bounds, and tolerance
@@ -25,11 +27,11 @@ program ternary_search_function_based
 
     ! The boundary values can vary depending on the problem context.
     ! In this example, they are chosen arbitrarily.
-    left = 0.0
-    right = 10.0
+    left = 0.0d0
+    right = 10.0d0
 
     ! The tolerance value defines how close the left and right bounds must be for the search to terminate.
-    tol = 1.0e-6
+    tol = 1.0e-6_dp
 
     ! Call the ternary search to find the minimum point of f_min
     min_point = ternary_search_minimum(f_min, left, right, tol)
@@ -51,7 +53,7 @@ end program ternary_search_function_based
 
 real(8) function f_min(x)
     real(8), intent(in) :: x
-    f_min = (x - 5.0)**2 + cos(x)      ! Example of a quadratic function with a cosine oscillation
+    f_min = (x - 5.0d0)**2 + cos(x)      ! Example of a quadratic function with a cosine oscillation
 end function f_min
 
 ! Define the unimodal function f_max with a maximum near x = 5.0
@@ -61,5 +63,5 @@ end function f_min
 
 real(8) function f_max(x)
     real(8), intent(in) :: x
-    f_max = -(x - 5.0)**2 + cos(x)     ! Example of a quadratic function with a cosine oscillation
+    f_max = -(x - 5.0d0)**2 + cos(x)     ! Example of a quadratic function with a cosine oscillation
 end function f_max

@@ -6,7 +6,6 @@
 program tests_radix_sort
     use radix_sort_module
     implicit none
-    integer :: i
     integer, dimension(:), allocatable :: array
     integer, parameter :: base10 = 10, base2 = 2, base16 = 16
 
