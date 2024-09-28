@@ -3,6 +3,13 @@
 !! This module estimates the integral of a function over a specified range
 !! using the Monte Carlo method (with OpenMP parallelization) and provides an error estimate.
 !!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #25
+!!  https://github.com/TheAlgorithms/Fortran/pull/25
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! The method works by randomly sampling points within the integration range [a, b]
 !! and evaluating the function at those points to estimate the integral.
 !!

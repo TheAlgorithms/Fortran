@@ -1,6 +1,13 @@
 !> Gnome Sort Algorithm
-
-!> This module implements the Gnome Sort algorithm.
+!!
+!! This module implements the Gnome Sort algorithm.
+!!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #09
+!!  https://github.com/TheAlgorithms/Fortran/pull/9
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
 !!
 !! Gnome Sort is a simple comparison-based sorting algorithm.
 !! It iterates through the array, comparing and swapping elements if needed.
@@ -12,6 +19,7 @@
 !!
 !! Output:
 !! - A sorted array of integers.
+!!
 module gnome_sort_module
     implicit none
 

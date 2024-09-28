@@ -1,6 +1,13 @@
-!> ## Heap Sort Algorithm
-!>
+!> Heap Sort Algorithm
+!!
 !! This module implements the Heap Sort algorithm.
+!!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #8
+!!  https://github.com/TheAlgorithms/Fortran/pull/8
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
 !!
 !! Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure.
 !! It first builds a max heap from the input data and then repeatedly extracts the maximum
@@ -13,6 +20,7 @@
 !!
 !! Output:
 !! - A sorted array of integers.
+!!
 module heap_sort_module
     implicit none
 

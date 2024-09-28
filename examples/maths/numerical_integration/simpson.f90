@@ -1,4 +1,12 @@
 !> Example Program for Simpson's Rule
+!!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #25
+!!  https://github.com/TheAlgorithms/Fortran/pull/25
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! This program demonstrates the use of Simpson's rule for numerical integration.
 !!
 !! It sets the integration limits and number of panels, and calls the

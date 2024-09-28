@@ -1,5 +1,12 @@
 !> Test program for the Quick Sort algorithm
-
+!!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #10
+!!  https://github.com/TheAlgorithms/Fortran/pull/10
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! This program provides additional test cases to validate the quick_sort_module.
 
 program tests_quick_sort

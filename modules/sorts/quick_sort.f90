@@ -1,6 +1,14 @@
 !> Quick Sort Algorithm
+!!
 !! This module implements the Quick Sort algorithm, a highly efficient
 !! sorting technique that uses the divide-and-conquer strategy.
+!!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #10
+!!  https://github.com/TheAlgorithms/Fortran/pull/10
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
 !!
 !! Quick Sort works by selecting a pivot element and partitioning the
 !! array into elements less than the pivot and elements greater than the pivot.

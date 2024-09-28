@@ -1,5 +1,12 @@
 !> Example program for the Heap Sort algorithm
 !!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #8
+!!  https://github.com/TheAlgorithms/Fortran/pull/8
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! This program demonstrates the use of the heap_sort_module by sorting an array of integers.
 
 program test_heap_sort
