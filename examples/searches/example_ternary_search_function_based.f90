@@ -1,5 +1,12 @@
 !> Example Program: Function-based Ternary Search for Minimum and Maximum
 !!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #24
+!!  https://github.com/TheAlgorithms/Fortran/pull/24
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! This program demonstrates how to use the function-based ternary search algorithm
 !! from the `ternary_search` module to find the minimum and maximum of unimodal functions.
 

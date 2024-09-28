@@ -1,6 +1,14 @@
 !> Ternary Search Algorithm Module
 !!
-!! This module implements two types of ternary search algorithms: array-based and function-based.
+!! This module implements two types of ternary search algorithm: array-based and function-based.
+!!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #24
+!!  https://github.com/TheAlgorithms/Fortran/pull/24
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! The array-based ternary search is used to find a target element within a sorted array, while the function-based
 !! approach is used to find the minimum or maximum of a unimodal function.
 !!
