@@ -2,6 +2,13 @@
 !!
 !! This module implements Simpson's rule for numerical integration.
 !!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #25
+!!  https://github.com/TheAlgorithms/Fortran/pull/25
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! Simpson's rule approximates the definite integral of a function by
 !! dividing the area under the curve into parabolic segments and summing
 !! their areas, providing a higher degree of accuracy than the Trapezoidal rule.

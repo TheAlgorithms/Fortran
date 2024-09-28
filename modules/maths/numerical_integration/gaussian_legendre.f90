@@ -2,6 +2,13 @@
 !!
 !! This module provides the implementation of Gaussian-Legendre Quadrature.
 !!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #25
+!!  https://github.com/TheAlgorithms/Fortran/pull/25
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! The method approximates the definite integral of a function over a specified interval [a, b].
 !!
 !! The quadrature method works by transforming nodes and weights from the reference interval [-1, 1] to the

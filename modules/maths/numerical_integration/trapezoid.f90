@@ -2,6 +2,13 @@
 !!
 !! This module implements the Trapezoidal rule for numerical integration.
 !!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #25
+!!  https://github.com/TheAlgorithms/Fortran/pull/25
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! The Trapezoidal rule approximates the definite integral of a function by
 !! dividing the area under the curve into trapezoids and summing their areas.
 !!

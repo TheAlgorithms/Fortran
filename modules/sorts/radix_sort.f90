@@ -1,6 +1,13 @@
 !> Radix Sort Algorithm
-
-!> This module implements the Radix Sort algorithm with configurable base.
+!!
+!! This module implements the Radix Sort algorithm with configurable base.
+!!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #11
+!!  https://github.com/TheAlgorithms/Fortran/pull/11
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
 !!
 !! Radix Sort is a non-comparison-based sorting algorithm that sorts numbers by processing individual digits.
 !! It is particularly efficient for sorting large lists of integers with a fixed number of digits.
@@ -13,6 +20,7 @@
 !!
 !! Output:
 !! - A sorted array of integers.
+!!
 module radix_sort_module
     implicit none
 

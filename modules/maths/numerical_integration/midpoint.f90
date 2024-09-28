@@ -2,6 +2,13 @@
 !!
 !! This module implements Midpoint rule for numerical integration.
 !!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #25
+!!  https://github.com/TheAlgorithms/Fortran/pull/25
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
+!!
 !! The midpoint rule approximates the integral by calculating the function
 !! value at the midpoint of each subinterval and summing these values, multiplied
 !! by the width of the subintervals.
