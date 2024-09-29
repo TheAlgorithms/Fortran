@@ -12,6 +12,7 @@
 ## Searches
 * [linear_search](/modules/searches/linear_search.f90)
 * [recursive_linear_search](/modules/searches/recursive_linear_search.f90)
+* [ternary_search](/modules/searches/ternary_search_module.f90)
 ## Sorts
 * [bubble_sort](/modules/sorts/bubble_sort.f90)
 * [recursive_bubble_sort](/modules/sorts/recursive_bubble_sort.f90)

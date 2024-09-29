@@ -1,7 +1,16 @@
 cmake_minimum_required(VERSION 3.16)
 project(FortranProject LANGUAGES Fortran)
 
-add_compile_options(-Wall -Wextra -Wpedantic)
+add_compile_options(
+    -Wall
+    -Wextra
+    -Wpedantic
+    -Waliasing
+    -Wconversion-extra
+    -Wimplicit-interface
+    -Wimplicit-procedure
+    -Wsurprising
+    -Werror)
 
 function(add_fortran_sources DIR SOURCES)
     file(GLOB_RECURSE NEW_SOURCES "${DIR}/*.f90")
