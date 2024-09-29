@@ -23,7 +23,7 @@ contains
         implicit none
         integer, dimension(:), intent(inout) :: array   ! Input/output array to be sorted
         integer, intent(in) :: n                        ! Size of the array
-        integer :: middle, i
+        integer :: middle
         integer, dimension(:), allocatable :: left_half, right_half, sorted_array
 
         ! Base case: return if the array has 1 or fewer elements

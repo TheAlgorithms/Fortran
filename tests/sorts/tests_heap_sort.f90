@@ -6,7 +6,6 @@ program tests_heap_sort
 
     use heap_sort_module
     implicit none
-    integer :: i
     integer, dimension(:), allocatable :: array
 
     ! Test 1: Repeated elements
