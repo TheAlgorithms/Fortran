@@ -19,27 +19,27 @@ program example_monte_carlo
     use monte_carlo_integration
     implicit none
 
-    real(dp) :: a, b, integral_result, error_estimate
-    integer :: n
+    real(dp) :: lower_bound, upper_bound, integral_result, error_estimate
+    integer :: random_samples_number
 
     ! Set the integration limits and number of random samples
-    a = -1.0_dp
-    b = 1.0_dp
-    n = 1000000     !! 1E6 Number of random samples
+    lower_bound = -1.0_dp
+    upper_bound = 1.0_dp
+    random_samples_number = 1000000     !! 1E6 Number of random samples
 
-    ! Call Monte Carlo integration
-    call monte_carlo(integral_result, error_estimate, a, b, n, func)
+    ! Call Monte Carlo integration with the function passed as an argument
+    call monte_carlo(integral_result, error_estimate, lower_bound, upper_bound, random_samples_number, function)
 
     write (*, '(A, F12.6, A, F12.6)') "Monte Carlo result: ", integral_result, " +- ", error_estimate     !! ≈ 0.858421
 
 contains
 
-    function func(x) result(fx)
+    function function(x) result(fx)
         implicit none
         real(dp), intent(in) :: x
         real(dp) :: fx
 
         fx = exp(-x**2)*cos(2.0_dp*x)       !! Example function to integrate
-    end function func
+    end function function
 
 end program example_monte_carlo

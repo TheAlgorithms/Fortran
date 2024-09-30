@@ -19,27 +19,27 @@ program example_gaussian_quadrature
     use gaussian_legendre_quadrature
     implicit none
 
-    real(dp) :: a, b, integral_result
-    integer :: n
+    real(dp) :: lower_bound, upper_bound, integral_result
+    integer :: quadrature_points_number
 
     ! Set the integration limits and number of quadrature points
-    a = -1.0_dp
-    b = 1.0_dp
-    n = 5       !! Number of quadrature points
+    lower_bound = -1.0_dp
+    upper_bound = 1.0_dp
+    quadrature_points_number = 5       !! Number of quadrature points (order of accuracy) up to 5
 
-    ! Call Gaussian quadrature to compute the integral
-    call gauss_legendre_quadrature(integral_result, a, b, n, func)
+    ! Call Gaussian quadrature to compute the integral with the function passed as an argument
+    call gauss_legendre_quadrature(integral_result, lower_bound, upper_bound, quadrature_points_number, function)
 
     write (*, '(A, F12.6)') "Gaussian Quadrature result: ", integral_result          !! ≈ 0.858574
 
 contains
 
-    function func(x) result(fx)
+    function function(x) result(fx)
         implicit none
         real(dp), intent(in) :: x
         real(dp) :: fx
 
         fx = exp(-x**2)*cos(2.0_dp*x)       !! Example function to integrate
-    end function func
+    end function function
 
 end program example_gaussian_quadrature
