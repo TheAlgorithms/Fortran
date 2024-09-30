@@ -19,27 +19,27 @@ program example_tapezoid
     use trapezoidal_rule
     implicit none
 
-    real(dp) :: a, b, integral_result
-    integer :: n
+    real(dp) :: lower_bound, upper_bound, integral_result
+    integer :: panels_number
 
     ! Set the integration limits and number of panels
-    a = -1.0_dp
-    b = 1.0_dp
-    n = 1000000     !! 1E6 Number of subdivisions
+    lower_bound = -1.0_dp
+    upper_bound = 1.0_dp
+    panels_number = 1000000     !! 1E6 Number of subdivisions
 
     ! Call the trapezoidal rule with the function passed as an argument
-    call trapezoid(integral_result, a, b, n, func)
+    call trapezoid(integral_result, lower_bound, upper_bound, panels_number, function)
 
     write (*, '(A, F12.6)') 'Trapezoidal rule yields: ', integral_result     !! ≈ 0.858195
 
 contains
 
-    function func(x) result(fx)
+    function function(x) result(fx)
         implicit none
         real(dp), intent(in) :: x
         real(dp) :: fx
 
         fx = exp(-x**2)*cos(2.0_dp*x)       !! Example function to integrate
-    end function func
+    end function function
 
 end program example_tapezoid
