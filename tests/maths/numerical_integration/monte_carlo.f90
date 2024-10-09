@@ -33,7 +33,7 @@ contains
         a = 0.0_dp
         b = 1.0_dp
         n = 1000000
-        expected = 1.0_dp / 3.0_dp
+        expected = 1.0_dp/3.0_dp
 
         call monte_carlo(integral_result, error_estimate, a, b, n, f_x_squared)
         call assert_test(integral_result, expected, error_estimate, "Test 1: ∫ x^2 dx from 0 to 1")
@@ -75,7 +75,7 @@ contains
         real(dp), parameter :: pi = 4.D0*DATAN(1.D0)    ! Define Pi. Ensure maximum precision available on any architecture.
         integer :: n
         a = 0.0_dp
-        b = pi / 2.0_dp
+        b = pi/2.0_dp
         n = 1000000
         expected = 1.0_dp
 
@@ -174,7 +174,7 @@ contains
         real(dp) :: tol
 
         ! Set the tolerance based on the error estimate
-        tol = max(1.0e-5_dp, 10.0_dp * error_estimate)      ! Adjust as needed
+        tol = max(1.0e-5_dp, 10.0_dp*error_estimate)      ! Adjust as needed
 
         if (abs(actual - expected) < tol) then
             print *, test_name, " PASSED"
