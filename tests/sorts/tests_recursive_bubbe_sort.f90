@@ -1,8 +1,8 @@
 !> Test program for the Bubble Sort algorithm
 !!
 !!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
-!!  in Pull Request: #27
-!!  https://github.com/TheAlgorithms/Fortran/pull/27
+!!  in Pull Request: #29
+!!  https://github.com/TheAlgorithms/Fortran/pull/29
 !!
 !!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
 !!  addressing bugs/corrections to this file. Thank you!
