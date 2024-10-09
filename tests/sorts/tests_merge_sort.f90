@@ -1,8 +1,8 @@
 !> Test program for the Merge Sort algorithm
 !!
 !!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
-!!  in Pull Request: #29
-!!  https://github.com/TheAlgorithms/Fortran/pull/29
+!!  in Pull Request: #7
+!!  https://github.com/TheAlgorithms/Fortran/pull/7
 !!
 !!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
 !!  addressing bugs/corrections to this file. Thank you!
@@ -99,13 +99,14 @@ contains
         ! Call merge_sort in module
         call merge_sort(array, n)
 
-        ! Assert that the sorted array matches the expected array
+        ! Assert that the sorted array matches the expected array otherwise report failure for ctest
         if (all(array == expected)) then
             print *, test_name, " PASSED"
         else
             print *, test_name, " FAILED"
             print *, "Expected: ", expected
             print *, "Got: ", array
+            stop 1
         end if
 
     end subroutine run_test

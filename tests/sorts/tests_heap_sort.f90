@@ -1,8 +1,8 @@
 !> Test program for the Heap Sort algorithm
 !!
 !!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
-!!  in Pull Request: #29
-!!  https://github.com/TheAlgorithms/Fortran/pull/29
+!!  in Pull Request: #8
+!!  https://github.com/TheAlgorithms/Fortran/pull/8
 !!
 !!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
 !!  addressing bugs/corrections to this file. Thank you!
@@ -32,7 +32,7 @@ contains
     ! Test case 1: Array with repeated elements
     subroutine test_repeated_elements()
         array = (/5, 3, 8, 3, 1, 5, 7, 5, 10, 7, 3, 1/)
-        expected = (/1, 1, 3, 3, 3, 5, 5, 5, 7, 7, 8, 100/)
+        expected = (/1, 1, 3, 3, 3, 5, 5, 5, 7, 7, 8, 10/)
         call run_test(array, expected, "Test 1: Array with repeated elements")
     end subroutine test_repeated_elements
 
@@ -87,7 +87,6 @@ contains
         call run_test(array, expected, "Test 8: Empty array")
     end subroutine test_empty_array
 
-
     !> Subroutine to run the heap sort test
     subroutine run_test(array, expected, test_name)
         integer, dimension(:), intent(inout) :: array
@@ -100,7 +99,7 @@ contains
         ! Call heap_sort in module
         call heap_sort(array, n)
 
-        ! Assert that the sorted array matches the expected array
+        ! Assert that the sorted array matches the expected array otherwise report failure for ctest
         if (all(array == expected)) then
             print *, test_name, " PASSED"
         else
