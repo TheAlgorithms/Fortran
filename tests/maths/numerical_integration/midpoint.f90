@@ -1,13 +1,13 @@
-!> Test program for the Simpson Rule module
+!> Test program for the Midpoint Rule module
 !!
 !!  Created by: Your Name (https://github.com/YourGitHub)
-!!  in Pull Request: #32
-!!  https://github.com/TheAlgorithms/Fortran/pull/32
+!!  in Pull Request: #XX
+!!  https://github.com/TheAlgorithms/Fortran/pull/XX
 !!
-!!  This program provides test cases to validate the simpson_rule module against known integral values.
+!!  This program provides test cases to validate the midpoint_rule module against known integral values.
 
-program test_simpson_rule
-    use simpson_rule
+program test_midpoint_rule
+    use midpoint_rule
     implicit none
 
     ! Run test cases
@@ -30,9 +30,9 @@ contains
         integer :: panels_number
         lower_bound = 0.0_dp
         upper_bound = 1.0_dp
-        panels_number = 1000000  ! Must be even
-        expected = 1.0_dp/3.0_dp
-        call simpson(integral_result, lower_bound, upper_bound, panels_number, f_x_squared)
+        panels_number = 1000000  ! Must be a positive integer
+        expected = 1.0_dp / 3.0_dp
+        call midpoint(integral_result, lower_bound, upper_bound, panels_number, f_x_squared)
         call assert_test(integral_result, expected, "Test 1: ∫ x^2 dx from 0 to 1")
     end subroutine test_integral_x_squared_0_to_1
 
@@ -42,9 +42,9 @@ contains
         integer :: panels_number
         lower_bound = 0.0_dp
         upper_bound = 2.0_dp
-        panels_number = 1000000  ! Must be even
-        expected = 8.0_dp/3.0_dp
-        call simpson(integral_result, lower_bound, upper_bound, panels_number, f_x_squared)
+        panels_number = 1000000  ! Must be a positive integer
+        expected = 8.0_dp / 3.0_dp
+        call midpoint(integral_result, lower_bound, upper_bound, panels_number, f_x_squared)
         call assert_test(integral_result, expected, "Test 2: ∫ x^2 dx from 0 to 2")
     end subroutine test_integral_x_squared_0_to_2
 
@@ -52,12 +52,12 @@ contains
     subroutine test_integral_sin_0_to_pi()
         real(dp) :: lower_bound, upper_bound, integral_result, expected
         integer :: panels_number
-        real(dp), parameter :: pi = 4.D0*DATAN(1.D0)  ! Define Pi. Ensure maximum precision available on any architecture.
+        real(dp), parameter :: pi = 4.D0 * DATAN(1.D0)  ! Define Pi. Ensure maximum precision available on any architecture.
         lower_bound = 0.0_dp
         upper_bound = pi
-        panels_number = 1000000  ! Must be even
+        panels_number = 1000000  ! Must be a positive integer
         expected = 2.0_dp
-        call simpson(integral_result, lower_bound, upper_bound, panels_number, sin_function)
+        call midpoint(integral_result, lower_bound, upper_bound, panels_number, sin_function)
         call assert_test(integral_result, expected, "Test 3: ∫ sin(x) dx from 0 to π")
     end subroutine test_integral_sin_0_to_pi
 
@@ -67,9 +67,9 @@ contains
         integer :: panels_number
         lower_bound = 0.0_dp
         upper_bound = 1.0_dp
-        panels_number = 1000000  ! Must be even
+        panels_number = 1000000  ! Must be a positive integer
         expected = exp(1.0_dp) - 1.0_dp
-        call simpson(integral_result, lower_bound, upper_bound, panels_number, exp_function)
+        call midpoint(integral_result, lower_bound, upper_bound, panels_number, exp_function)
         call assert_test(integral_result, expected, "Test 4: ∫ e^x dx from 0 to 1")
     end subroutine test_integral_e_x_0_to_1
 
@@ -79,9 +79,9 @@ contains
         integer :: panels_number
         lower_bound = 1.0_dp
         upper_bound = exp(1.0_dp)
-        panels_number = 1000000  ! Must be even
+        panels_number = 1000000  ! Must be a positive integer
         expected = 1.0_dp
-        call simpson(integral_result, lower_bound, upper_bound, panels_number, log_function)
+        call midpoint(integral_result, lower_bound, upper_bound, panels_number, log_function)
         call assert_test(integral_result, expected, "Test 5: ∫ (1/x) dx from 1 to e")
     end subroutine test_integral_1_over_x_1_to_e
 
@@ -91,10 +91,10 @@ contains
         real(dp), parameter :: pi = 4.D0*DATAN(1.D0)  ! Define Pi. Ensure maximum precision available on any architecture.
         integer :: panels_number
         lower_bound = 0.0_dp
-        upper_bound = pi/2.0_dp
-        panels_number = 1000000  ! Must be even
+        upper_bound = pi / 2.0_dp
+        panels_number = 1000000  ! Must be a positive integer
         expected = 1.0_dp
-        call simpson(integral_result, lower_bound, upper_bound, panels_number, cos_function)
+        call midpoint(integral_result, lower_bound, upper_bound, panels_number, cos_function)
         call assert_test(integral_result, expected, "Test 6: ∫ cos(x) dx from 0 to π/2")
     end subroutine test_integral_cos_0_to_pi_over_2
 
@@ -104,9 +104,9 @@ contains
         integer :: panels_number
         lower_bound = 0.0_dp
         upper_bound = 1.0_dp
-        panels_number = 1000000  ! Must be even
+        panels_number = 1000000  ! Must be a positive integer
         expected = 0.25_dp
-        call simpson(integral_result, lower_bound, upper_bound, panels_number, f_x_cubed)
+        call midpoint(integral_result, lower_bound, upper_bound, panels_number, f_x_cubed)
         call assert_test(integral_result, expected, "Test 7: ∫ x^3 dx from 0 to 1")
     end subroutine test_integral_x_cubed_0_to_1
 
@@ -116,9 +116,9 @@ contains
         integer :: panels_number
         lower_bound = 0.0_dp
         upper_bound = 1.0_dp
-        panels_number = 1000000     ! Must be even
-        expected = 0.310268_dp        ! Approximate value, adjust tolerance as needed
-        call simpson(integral_result, lower_bound, upper_bound, panels_number, sin_squared_function)
+        panels_number = 1000000  ! Must be a positive integer
+        expected = 0.310268_dp  ! Approximate value, adjust tolerance as needed
+        call midpoint(integral_result, lower_bound, upper_bound, panels_number, sin_squared_function)
         call assert_test(integral_result, expected, "Test 8: ∫ sin(x^2) dx from 0 to 1")
     end subroutine test_integral_sin_x_squared_0_to_1
 
@@ -137,7 +137,7 @@ contains
     ! Function for 1/x
     real(dp) function log_function(x)
         real(dp), intent(in) :: x
-        log_function = 1.0_dp/x
+        log_function = 1.0_dp / x
     end function log_function
 
     ! Function for cos(x)
@@ -180,4 +180,4 @@ contains
         end if
     end subroutine assert_test
 
-end program test_simpson_rule
+end program test_midpoint_rule
