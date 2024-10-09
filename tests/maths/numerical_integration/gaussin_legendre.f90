@@ -31,7 +31,7 @@ contains
         lower_bound = 0.0_dp
         upper_bound = 1.0_dp
         panels_number = 5           ! Adjust the number of quadrature points as needed from 1 to 5
-        expected = 1.0_dp / 3.0_dp
+        expected = 1.0_dp/3.0_dp
         call gauss_legendre_quadrature(integral_result, lower_bound, upper_bound, panels_number, f_x_squared)
         call assert_test(integral_result, expected, "Test 1: ∫ x^2 dx from 0 to 1")
     end subroutine test_integral_x_squared_0_to_1
@@ -67,7 +67,7 @@ contains
         real(dp), parameter :: pi = 4.D0*DATAN(1.D0)  ! Define Pi. Ensure maximum precision available on any architecture.
         integer :: panels_number
         lower_bound = 0.0_dp
-        upper_bound = pi / 2.0_dp
+        upper_bound = pi/2.0_dp
         panels_number = 5
         expected = 1.0_dp
         call gauss_legendre_quadrature(integral_result, lower_bound, upper_bound, panels_number, cos_function)
@@ -126,7 +126,7 @@ contains
     ! Function for 1/x
     real(dp) function log_function(x)
         real(dp), intent(in) :: x
-        log_function = 1.0_dp / x
+        log_function = 1.0_dp/x
     end function log_function
 
     ! Function for cos(x)
