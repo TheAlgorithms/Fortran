@@ -1,5 +1,11 @@
 # The Algorithms - Directory of Fortran
 ## Maths
+* numerical_integration
+  * [trapezoidal_rule](/modules/maths/numerical_integration/trapezoid.f90)
+  * [simpson_rule](/modules/maths/numerical_integration/simpson.f90)
+  * [midpoint_rule](/modules/maths/numerical_integration/midpoint.f90)
+  * [monte_carlo](/modules/maths/numerical_integration/monte_carlo.f90)
+  * [gauss_legendre](/modules/maths/numerical_integration/gaussian_legendre.f90)
 * [euclid_gcd](/modules/maths/euclid_gcd.f90)
 * [factorial](/modules/maths/factorial.f90)
 * [fibonacci](/modules/maths/fibonacci.f90)

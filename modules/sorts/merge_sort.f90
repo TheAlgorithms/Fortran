@@ -1,6 +1,13 @@
 !> Merge Sort Algorithm
-
-!> This module implements the Merge Sort algorithm.
+!!
+!! This module implements the Merge Sort algorithm.
+!!
+!!  Created by: Ramy-Badr-Ahmed (https://github.com/Ramy-Badr-Ahmed)
+!!  in Pull Request: #7
+!!  https://github.com/TheAlgorithms/Fortran/pull/7
+!!
+!!  Please mention me (@Ramy-Badr-Ahmed) in any issue or pull request
+!!  addressing bugs/corrections to this file. Thank you!
 !!
 !! Merge Sort is a divide-and-conquer algorithm. It divides the input array into two halves, recursively sorts them,
 !! and then merges the two sorted halves.
