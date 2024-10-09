@@ -9,7 +9,6 @@
 !!
 !!  This program provides additional test cases to validate the linear_search_module.
 
-
 program tests_linear_search
     use linear_search_module
     implicit none
