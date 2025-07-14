@@ -20,7 +20,8 @@
     <img src="https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square" height="20" alt="Gitter chat">
   </a>
   
-  [![HitCount](https://hits.dwyl.com/TheAlgorithms/Fortran.svg?style=flat-square)](http://hits.dwyl.com/TheAlgorithms/Fortran)
+  ![Hit Count](https://visitor-badge.laobi.icu/badge?page_id=TheAlgorithms.Fortran)
+
   <!-- Second row: -->
   <br>
   <a href="https://github.com/TheAlgorithms/Fortran/actions">
