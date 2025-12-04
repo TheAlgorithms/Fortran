@@ -47,7 +47,7 @@ contains
 
     ! Test case 4: Square root of a non-perfect square (e.g., 2)
     subroutine test_sqrt_non_perfect_square()
-        expected = 1.41421356
+        expected = 1.4142136
         result = calculate_sqrt(2.0)
         call assert_test(result, expected, "Test 4: Square root of 2", tolerance)
     end subroutine test_sqrt_non_perfect_square
